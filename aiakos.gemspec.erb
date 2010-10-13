@@ -1,0 +1,26 @@
+<%- require "./lib/aiakos" -%>
+Gem::Specification.new do |s|
+  s.name = "aiakos"
+  s.version = "<%= Aiakos::VERSION %>"
+  s.summary = %{Ohm specific authentication solution.}
+  s.description = %Q{
+    Gets you 80-90% of the way regarding your authentication
+    requirements. Provides convenience helper functions which you can
+    use with your favorite web framework of choice.
+  }
+  s.authors = ["Michel Martens", "Damian Janowski", "Cyril David"]
+  s.email = ["michel@soveran.com", "djanowski@dimaion.com",
+             "cyx@pipetodevnull.com"]
+  s.homepage = "http://github.com/cyx/aiakos"
+  s.files = <%= Dir[
+    "lib/**/*.rb",
+    "README*",
+    "LICENSE",
+    "Rakefile",
+    "test/**/*.rb"
+  ].inspect %>
+
+  s.rubyforge_project = "aiakos"
+  s.add_development_dependency "cutest", "~> 1.0"
+  s.add_development_dependency "sinatra", "~> 1.0"
+end
